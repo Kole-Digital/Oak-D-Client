@@ -4,6 +4,7 @@ import { SingleBlog } from "@/components";
 import { BlogValue } from ".";
 import axios from "axios";
 import Head from "next/head";
+import { API_BASE_URL } from "@/lib/config";
 
 export default function BlogDetail() {
   const router = useRouter();
@@ -13,7 +14,7 @@ export default function BlogDetail() {
   useEffect(() => {
     const getSingleBlog = async () => {
       const response = await axios.get(
-        `https://oak-d-api.onrender.com/blog/${query.slug}`
+        `${API_BASE_URL}/blog/${query.slug}`
       );
       setMyBlog(response.data.data);
     };

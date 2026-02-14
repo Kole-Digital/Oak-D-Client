@@ -20,6 +20,7 @@ import { userToken } from "@/api/api";
 import axios from "axios";
 import { userPackageDataType } from "../warehousing";
 import Head from "next/head";
+import { API_BASE_URL } from "@/lib/config";
 
 export interface ClientDataType {
   sender: clientInfo;
@@ -81,7 +82,7 @@ export default function Domestic() {
     setIsLoading(true)
 
     const response = await axios.post(
-      "https://oak-d-api.onrender.com/package/register-package",
+      `${API_BASE_URL}/package/register-package`,
       formData,
       {
         headers: { Authorization: `Bearer ${userToken}` },

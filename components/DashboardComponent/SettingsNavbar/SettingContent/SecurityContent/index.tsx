@@ -5,6 +5,7 @@ import { SecurityModalContext, DeleteModalContext } from "@/context/UserDashboar
 import { initialUserDataType } from "@/pages/dashboard/settings";
 import { userToken } from "@/api/api";
 import axios from "axios";
+import { API_BASE_URL } from "@/lib/config";
 
 export interface PasswordDataType {
     oldPassword: string;
@@ -42,7 +43,7 @@ export function SecurityContent({initialUserValue}: SecurityContentDataType){
         event.preventDefault();
         try {
             if (changePassword.oldPassword !== '' && changePassword.newPassword !== '' && changePassword.confirmPassword !== '' && changePassword.newPassword === changePassword.confirmPassword) {
-                const {data} = await axios.patch(`https://oakandd-api.onrender.com/users/${initialUserValue._id}`, changePassword, {headers: {Authorization: `Bearer ${userToken}`}});
+                const {data} = await axios.patch(`${API_BASE_URL}/users/${initialUserValue._id}`, changePassword, {headers: {Authorization: `Bearer ${userToken}`}});
 
                 setChangePassword({
                     oldPassword: '',

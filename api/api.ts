@@ -3,12 +3,13 @@ import { userData } from "@/pages/get-started";
 import { LoginDataType } from "@/pages/login";
 import { profileDataType } from "@/components/DashboardComponent/SettingsNavbar/SettingContent/ProfileContent";
 import { getCookie } from "cookies-next";
+import { API_BASE_URL } from "@/lib/config";
 
 export const userToken = getCookie("token");
 
 // GE ALL USERS
 export async function getAllUsers() {
-  const response = await axios.get(`${process.env.API_BASE_URL}/users`);
+  const response = await axios.get(`${API_BASE_URL}/users`);
 
   return response.data;
 }
@@ -16,7 +17,7 @@ export async function getAllUsers() {
 // GET SINGLE USER
 export async function getSingleUser() {
   const response = await axios.get(
-    "https://oak-d-api.onrender.com/users/single",
+    `${API_BASE_URL}/users/single`,
     {
       headers: {
         Authorization: `Bearer ${userToken}`,
@@ -30,7 +31,7 @@ export async function getSingleUser() {
 // REGISTER USER
 export async function createUser(body: userData) {
   const response = await axios.post(
-    "https://oak-d-api.onrender.com/auth/user/register",
+    `${API_BASE_URL}/auth/user/register`,
     JSON.stringify(body),
     {
       headers: {
@@ -44,7 +45,7 @@ export async function createUser(body: userData) {
 // UPDATE USER PROFILE
 export async function updateUserProfile(body: profileDataType) {
   const response = await axios.post(
-    `https://oak-d-api.onrender.com/users/update-profile`,
+    `${API_BASE_URL}/users/update-profile`,
     body,
     { headers: { Authorization: `Bearer ${userToken}` } }
   );
@@ -60,7 +61,7 @@ export type verifyUserData = {
 
 export async function verifyUser(code: verifyUserData) {
   const response = await axios.post(
-    "https://oak-d-api.onrender.com/auth/user/verify",
+    `${API_BASE_URL}/auth/user/verify`,
     code
   );
 
@@ -70,7 +71,7 @@ export async function verifyUser(code: verifyUserData) {
 // LOGIN USER
 export async function loginUser(body: LoginDataType) {
   const response = await axios.post(
-    "https://oak-d-api.onrender.com/auth/user/login",
+    `${API_BASE_URL}/auth/user/login`,
     body
   );
 
@@ -83,7 +84,7 @@ export type forgotPasswordType = {
 };
 export async function forgotPassword(body: forgotPasswordType) {
   const response = await axios.post(
-    "https://oak-d-api.onrender.com/auth/user/reset-password",
+    `${API_BASE_URL}/auth/user/reset-password`,
     body
   );
 
@@ -97,7 +98,7 @@ export type passwordOTP = {
 };
 export async function verifyPasswordOTP(body: passwordOTP) {
   const response = await axios.post(
-    "https://oak-d-api.onrender.com/auth/user/verify-password-reset",
+    `${API_BASE_URL}/auth/user/verify-password-reset`,
     body
   );
 
@@ -112,7 +113,7 @@ export type newPasswordType = {
 };
 export async function newPassword(body: newPasswordType) {
   const response = await axios.post(
-    "https://oak-d-api.onrender.com/auth/user/add-new-password",
+    `${API_BASE_URL}/auth/user/add-new-password`,
     body
   );
 
@@ -122,7 +123,7 @@ export async function newPassword(body: newPasswordType) {
 // DELETE USER
 export async function deleteUser(id: string) {
   const response = await axios.delete(
-    `https://oak-d-api.onrender.com/users/${id}`,
+    `${API_BASE_URL}/users/${id}`,
     {
       headers: {
         Authorization: `Bearer ${userToken}`,
@@ -136,7 +137,7 @@ export async function deleteUser(id: string) {
 // Get User Package
 export async function getUserPackage(packages: string[]) {
   const response = await axios.post(
-    "https://oak-d-api.onrender.com/package/get-packages",
+    `${API_BASE_URL}/package/get-packages`,
     { packages },
     {
       headers: {
@@ -153,7 +154,7 @@ export type TrackerDataType = {
 };
 export async function trackParcel(body: TrackerDataType) {
   const response = await axios.post(
-    "https://oak-d-api.onrender.com/package/track-parcel",
+    `${API_BASE_URL}/package/track-parcel`,
     body
   );
   return response.data;

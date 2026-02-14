@@ -19,6 +19,7 @@ import axios from "axios";
 import { ClientDataType } from "../domestic";
 import { userPackageDataType } from "../warehousing";
 import Head from "next/head";
+import { API_BASE_URL } from "@/lib/config";
 
 export default function Global() {
   const [data, setData] = useState<any>();
@@ -74,7 +75,7 @@ export default function Global() {
     setIsLoading(true)
 
     const response = await axios.post(
-      "https://oak-d-api.onrender.com/package/register-package",
+      `${API_BASE_URL}/package/register-package`,
       formData,
       {
         headers: { Authorization: `Bearer ${userToken}` },

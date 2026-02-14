@@ -3,6 +3,7 @@ import { BlogValue } from "@/pages/blogs";
 import axios from "axios";
 import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
+import { API_BASE_URL } from "@/lib/config";
 
 type BlogDataProps = {
   blogData: BlogValue[];
@@ -16,7 +17,7 @@ export const Latest = () => {
   useEffect(() => {
     const getBlog = async () => {
       try {
-        const response = await axios.get("https://oak-d-api.onrender.com/blog");
+        const response = await axios.get(`${API_BASE_URL}/blog`);
         const { data } = response.data;
         setBlogData(data);
       } catch (error) {

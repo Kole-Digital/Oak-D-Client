@@ -16,6 +16,7 @@ import { useRouter } from "next/router";
 import { userToken } from "@/api/api";
 import { useState } from "react";
 import Head from "next/head";
+import { API_BASE_URL } from "@/lib/config";
 
 
 export interface userPackageDataType {
@@ -82,7 +83,7 @@ export default function Warehousing() {
     setIsLoading(true);
 
     const response = await axios.post(
-      "https://oak-d-api.onrender.com/package/register-package",
+      `${API_BASE_URL}/package/register-package`,
       formData,
       {
         headers: { Authorization: `Bearer ${userToken}` },

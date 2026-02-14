@@ -5,6 +5,7 @@ import { getSingleUser } from "@/api/api";
 import { deleteUser } from "@/api/api";
 import axios from "axios";
 import { parse } from 'cookie';
+import { API_BASE_URL } from "@/lib/config";
 
 export interface initialUserDataType {
     _id: string;
@@ -81,7 +82,7 @@ export const getServerSideProps = async (context: any) => {
       };
     }
     const response = await axios.post(
-      "https://oak-d-api.onrender.com/auth/user/verify-token",
+      `${API_BASE_URL}/auth/user/verify-token`,
       { token: myCookies.token }
     );
     const isAuthenticated = response.data.data.email && response.data.data.role;

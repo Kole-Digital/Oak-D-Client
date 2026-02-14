@@ -3,6 +3,7 @@ import { NavContext, LayoutContext } from "@/context/UserDashboardLayout";
 import { useState } from "react";
 import axios from "axios";
 import { parse } from 'cookie';
+import { API_BASE_URL } from "@/lib/config";
 
 function Transaction(){
     const [showNav, setShowNav] = useState(false);
@@ -38,7 +39,7 @@ export const getServerSideProps = async (context: any) => {
       };
     }
     const response = await axios.post(
-      "https://oak-d-api.onrender.com/auth/user/verify-token",
+      `${API_BASE_URL}/auth/user/verify-token`,
       { token: myCookies.token }
     );
     const isAuthenticated = response.data.data.email && response.data.data.role;

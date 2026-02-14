@@ -4,6 +4,7 @@ import { type } from "os";
 import React from "react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { API_BASE_URL } from "@/lib/config";
 
 type BlogValues = {
   _id?: string;
@@ -25,7 +26,7 @@ export const AllBlogs = () => {
   useEffect(() => {
     const getBlog = async () => {
       try {
-        const response = await axios.get("https://oak-d-api.onrender.com/blog");
+        const response = await axios.get(`${API_BASE_URL}/blog`);
         const { data } = response.data;
         setBlog(data);
         setloading(false);

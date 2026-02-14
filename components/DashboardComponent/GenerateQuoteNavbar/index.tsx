@@ -26,6 +26,7 @@ import { userToken } from "@/api/api";
 import { setCookie } from "cookies-next";
 import { useRouter } from "next/dist/client/router";
 import axios from "axios";
+import { API_BASE_URL } from "@/lib/config";
 
 export interface DataType {
   sender: userInfo;
@@ -106,7 +107,7 @@ export function GenerateQuoteNavbar() {
     console.log(formData);
 
     const response = await axios.post(
-      "https://oak-d-api.onrender.com/package/register-package",
+      `${API_BASE_URL}/package/register-package`,
       formData,
       {
         headers: { Authorization: `Bearer ${userToken}` },
@@ -171,7 +172,7 @@ export function GenerateQuoteNavbar() {
     setDomesticSpinner(true);
 
     const response = await axios.post(
-      "https://oak-d-api.onrender.com/package/register-package",
+      `${API_BASE_URL}/package/register-package`,
       formData,
       {
         headers: { Authorization: `Bearer ${userToken}` },
