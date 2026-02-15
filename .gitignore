@@ -37,3 +37,6 @@ yarn-error.log*
 next-env.d.ts
 CLAUDE.md
 .claude/settings.local.json
+
+# Local Netlify folder
+.netlify
