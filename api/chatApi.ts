@@ -2,12 +2,12 @@ import axios from "axios";
 import { ChatRequestBody, ChatResponseBody } from "@/types/chat";
 
 const CHAT_TIMEOUT_MS = 30_000;
-const BOT_SERVER_URL = process.env.NEXT_PUBLIC_CHAT_SERVER_URL || "";
+const DEFAULT_BOT_SERVER_URL = "https://oak-bot.onrender.com";
+const BOT_SERVER_URL =
+  process.env.NEXT_PUBLIC_CHAT_SERVER_URL || DEFAULT_BOT_SERVER_URL;
 const CHAT_API_KEY = process.env.NEXT_PUBLIC_CHAT_API_KEY;
 
-const CHAT_ENDPOINT = BOT_SERVER_URL
-  ? `${BOT_SERVER_URL.replace(/\/$/, "")}/api/chat`
-  : "/api/chat";
+const CHAT_ENDPOINT = `${BOT_SERVER_URL.replace(/\/$/, "")}/api/chat`;
 
 export async function sendChatMessage(body: ChatRequestBody): Promise<ChatResponseBody> {
   const headers: Record<string, string> = {

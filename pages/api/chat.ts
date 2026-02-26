@@ -2,10 +2,11 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 import { ChatResponseBody } from "@/types/chat";
 
+const DEFAULT_BOT_SERVER_URL = "https://oak-bot.onrender.com";
 const BOT_SERVER_URL =
   process.env.BOT_SERVER_URL ||
   process.env.NEXT_PUBLIC_CHAT_SERVER_URL ||
-  "http://localhost:8080";
+  DEFAULT_BOT_SERVER_URL;
 const BOT_API_KEY = process.env.CHAT_API_KEY || process.env.NEXT_PUBLIC_CHAT_API_KEY;
 
 export default async function handler(
