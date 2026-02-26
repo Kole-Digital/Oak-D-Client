@@ -5,12 +5,6 @@ import { forgotPassword } from "@/api/api";
 import { Spinner } from "@chakra-ui/react";
 
 const styles = {
-    bgImage: {
-        background: 'url(../img/get-started-background.svg)',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-    },
     square: {
         background: 'rgba(254, 254, 254, 0.68)'
     }
@@ -52,7 +46,7 @@ const ForgotPassword = ()=> {
         <div>
             <div className="font-poppins px-[10px] md:px-[0px] relative">
                 <div className="flex justify-between">
-                    <div className="hidden bg-black lg:py-[50px] lg:block relative lg:w-[70%]" style={styles.bgImage}>
+                    <div className="hidden bg-black lg:py-[50px] lg:block relative lg:w-[70%] auth-bg">
                         <div className="w-[350px] p-[20px] absolute top-[40%] lg:left-[5%] xl:left-[15%]" style={styles.square}>
                             <img src="../img/get-started-vector.svg" alt="" className="mb-[10px] h-50]" />
                             <p className="text-[16px] mb-[10px]">I have been using the company since its inception and its been a smooth ride all the way. Their customer service is topnotch. Their delivery time is si exceptional.  Tested, trusted and Recommended.</p>

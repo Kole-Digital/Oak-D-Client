@@ -10,14 +10,14 @@ export function DomesticQuoteLand() {
        <div className='w-[100vw] h-[835px] lg:h-[945px] '>
             <div className='hidden md:block h-[100%] w-[100%]'>
               <img 
-                src="/img/get-started-background1.svg" 
+                src="/img/get-started-background1.webp" 
                 alt="global shipping" 
                 className='w-[100%] h-[100%] object-cover ' 
               />
             </div>
             <div className='block md:hidden h-[100%] w-[100%]'>
               <img 
-                src="/img/get-started-background.svg" 
+                src="/img/get-started-background.webp" 
                 alt="global shipping" 
                 className='w-[100%] h-[100%] object-cover ' 
               />

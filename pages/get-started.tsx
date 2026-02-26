@@ -14,12 +14,6 @@ export type userData = {
   confirmPassword: string;
 };
 const styles = {
-  bgImage: {
-    background: "url(../img/get-started-background.svg)",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-  },
   square: {
     background: "rgba(254, 254, 254, 0.68)",
   },
@@ -103,8 +97,6 @@ const GetStarted = () => {
     <div className="font-poppins px-[10px] md:px-[0px]">
       <Head>
         <title>Get Started</title>
-        {/* <link rel="icon" href="/img/nav-logo.svg" /> */}
-        <link rel="icon" href="/img/fav-logo.png" />
         <meta
           name="description"
           content="Welcome to OAK&D Canada, your trusted logistics partner for seamless package shipping and delivery. Our mission is to connect you with efficient and reliable shipping solutions, ensuring your packages reach their destination on time, every time. Explore our services today and experience hassle-free shipping with OAK&D."
@@ -113,8 +105,7 @@ const GetStarted = () => {
       </Head>
       <div className="flex justify-between">
         <div
-          className="hidden lg:block relative lg:w-[100%]"
-          style={styles.bgImage}
+          className="hidden lg:block relative lg:w-[100%] auth-bg"
         >
           <div
             className="w-[80%] p-[20px] absolute top-[40%] lg:left-[50%] lg:transform lg:translate-x-[-50%] "

@@ -26,8 +26,6 @@ export default function BlogDetail() {
     <>
       <Head>
         <title>Blog Detail</title>
-        {/* <link rel="icon" href="/img/nav-logo.svg" /> */}
-        <link rel="icon" href="/img/fav-logo.png" />
         <meta
           name="description"
           content="Welcome to OAK&D Canada, your trusted logistics partner for seamless package shipping and delivery. Our mission is to connect you with efficient and reliable shipping solutions, ensuring your packages reach their destination on time, every time. Explore our services today and experience hassle-free shipping with OAK&D."

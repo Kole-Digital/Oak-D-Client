@@ -34,7 +34,7 @@ const initialValues: data = {
 
 const styles = {
   firstSection: {
-    background: "url(../img/contact-woman-with-headset.svg)",
+    background: "url(../img/contact-woman-with-headset.webp)",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
@@ -98,8 +98,6 @@ const Contact = () => {
     <div>
       <Head>
         <title>Contact Us</title>
-        {/* <link rel="icon" href="/img/nav-logo.svg" /> */}
-        <link rel="icon" href="/img/fav-logo.png" />
         <meta
           name="description"
           content="Welcome to OAK&D Canada, your trusted logistics partner for seamless package shipping and delivery. Our mission is to connect you with efficient and reliable shipping solutions, ensuring your packages reach their destination on time, every time. Explore our services today and experience hassle-free shipping with OAK&D."

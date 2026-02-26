@@ -33,3 +33,10 @@ body{
 @tailwind components;
 @tailwind utilities;
 
+.auth-bg {
+  background: url('/img/get-started-background.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+

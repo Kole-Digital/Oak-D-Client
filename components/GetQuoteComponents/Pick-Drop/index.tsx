@@ -16,7 +16,7 @@ export function PickDrop() {
           <div className="w-[100vw] h-[835px] lg:h-[945px] ">
             <div className="h-[100%] w-[100%]">
               <img
-                src="/img/pick-drop.svg"
+                src="/img/pick-drop.webp"
                 alt="global shipping"
                 className="w-[100%] h-[100%] object-cover "
               />

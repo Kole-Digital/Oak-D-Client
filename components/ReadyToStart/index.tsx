@@ -4,7 +4,7 @@ import React from "react";
 const styles = {
   getStartedSection: {
     background:
-      "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/contact-happy-african-american-delivery-woman.svg)",
+      "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/contact-happy-african-american-delivery-woman.webp)",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",

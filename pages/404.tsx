@@ -21,7 +21,7 @@ function PageNotFound() {
       <div className="lg:w-[100%] ">
         <div className="relative mb-[15px] flex flex-col items-center ">
           <Image
-            src="../img/container-image.svg"
+            src="../img/container-image.webp"
             alt="Container Image"
             layout="responsive"
             width={500}

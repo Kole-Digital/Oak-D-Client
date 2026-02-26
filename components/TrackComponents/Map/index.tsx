@@ -30,7 +30,7 @@ export function Map() {
       <div className="relative h-[600px] lg:h-[949px] ">
         <div className="w-[100%] h-[100%] ">
           <img
-            src="/img/Map.svg"
+            src="/img/Map.webp"
             alt="Track Item"
             className="object-cover w-[100%] h-[100%] hidden lg:block"
           />

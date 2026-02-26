@@ -73,12 +73,12 @@ export function TrackLand() {
       <Navbar />
       <div className="w-[100vw] h-[100vh] mt-[100px] ">
         <img
-          src="/img/track-back.svg"
+          src="/img/track-back.webp"
           alt="Track Item"
           className="w-[100%] h-[100%] object-cover block lg:hidden"
         />
         <img
-          src="/img/track-back1.svg"
+          src="/img/track-back1.webp"
           alt="Track Item"
           className="w-[100%] h-[100%] object-cover hidden lg:block"
         />

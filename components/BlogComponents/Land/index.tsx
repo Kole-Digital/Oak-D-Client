@@ -6,7 +6,7 @@ export function BlogLand() {
       <div className="h-[90vh] relative ">
         <div className="w-[100vw] h-[100%] bg-black ">
           <img
-            src="/img/blog-land.svg"
+            src="/img/blog-land.webp"
             alt="Blogs"
             className="w-[100%] h-[100%] object-cover "
           />

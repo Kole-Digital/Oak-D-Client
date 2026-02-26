@@ -73,7 +73,7 @@ export function Land() {
         </div>
         <div className="hidden md:block">
           <img
-            src="/img/land-image1.svg"
+            src="/img/land-image1.webp"
             alt="OAK Image"
             className="w-[100%] h-[100%] md:h-[100%] "
           />

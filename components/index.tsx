@@ -15,5 +15,4 @@ export * from "./GetQuoteComponents/Domestic/index";
 export * from './DashboardComponent/index';
 export * from './GoogleMap/index';
 export * from './Functions/index';
-
-
+export { default as ChatWidget } from './ChatWidget/index';

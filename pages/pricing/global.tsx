@@ -4,7 +4,7 @@ import { faqs } from "@/utils/faq";
 const Global = () => {
   const styles = {
     firstSection: {
-      background: "url(../img/pricing-page-two-deliverers-communicating.svg)",
+      background: "url(../img/pricing-page-two-deliverers-communicating.webp)",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",

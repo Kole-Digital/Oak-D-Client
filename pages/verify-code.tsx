@@ -7,12 +7,6 @@ import { Spinner } from "@chakra-ui/react";
 import Head from "next/head";
 
 const styles = {
-  bgImage: {
-    background: "url(../img/get-started-background.svg)",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-  },
   square: {
     background: "rgba(254, 254, 254, 0.68)",
   },
@@ -53,8 +47,6 @@ const VerifyCode = () => {
     <div className="relative h-[100vh]">
       <Head>
         <title>Account Verification</title>
-        {/* <link rel="icon" href="/img/nav-logo.svg" /> */}
-        <link rel="icon" href="/img/fav-logo.png" />
         <meta
           name="description"
           content="Welcome to OAK&D Canada, your trusted logistics partner for seamless package shipping and delivery. Our mission is to connect you with efficient and reliable shipping solutions, ensuring your packages reach their destination on time, every time. Explore our services today and experience hassle-free shipping with OAK&D."
@@ -65,8 +57,7 @@ const VerifyCode = () => {
       <div className="font-poppins px-[10px] md:px-[0px]">
         <div className="flex justify-between">
           <div
-            className="hidden bg-black lg:py-[50px] lg:block relative lg:w-[70%]"
-            style={styles.bgImage}
+            className="hidden bg-black lg:py-[50px] lg:block relative lg:w-[70%] auth-bg"
           >
             <div
               className="w-[350px] p-[20px] absolute top-[40%] lg:left-[5%] xl:left-[15%]"
