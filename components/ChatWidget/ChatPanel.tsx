@@ -83,7 +83,6 @@ export default function ChatPanel({ isMobile }: ChatPanelProps) {
             messages={messages}
             isLoading={isLoading}
             onRetry={retryLastMessage}
-            onQuickAction={sendMessage}
           />
           <ChatInput onSend={sendMessage} disabled={isLoading} />
         </>

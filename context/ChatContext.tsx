@@ -130,13 +130,29 @@ export function ChatContextProvider({ children }: ChatContextProviderProps) {
         ? `${loggedInUser.firstName} ${loggedInUser.lastName}`.trim()
         : "";
 
+      const resolvedName = (nextUser.name || fallbackName).trim();
+      const firstName = resolvedName.split(" ")[0] || resolvedName;
+
       setChatUser({
         id: nextUser.id || loggedInUser?._id,
-        name: (nextUser.name || fallbackName).trim(),
+        name: resolvedName,
         phone: nextUser.phone.trim(),
         email: (nextUser.email || loggedInUser?.email || "").trim(),
       });
       setError(null);
+
+      // Add Tara's welcome message when there are no existing messages
+      setMessages((prev) => {
+        if (prev.length > 0) return prev;
+        return [
+          {
+            id: generateMessageId(),
+            role: "assistant",
+            content: `Hi ${firstName}! I'm Tara, your Oak & D assistant. I'm here to help with tracking your packages, getting shipping quotes, or anything else you need. What can I help you with today?`,
+            timestamp: Date.now(),
+          },
+        ];
+      });
     },
     [loggedInUser]
   );
